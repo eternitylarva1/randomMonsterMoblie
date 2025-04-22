@@ -1,5 +1,6 @@
 package randomMod.relics;
 
+import com.megacrit.cardcrawl.relics.MercuryHourglass;
 import randomMod.RandomMod;
 import randomMod.utils.randommonster;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -31,6 +32,7 @@ public class RandomFusionMonster extends CustomRelic {
     @Override
     public void atBattleStart() {
         roll_monster();
+
     }
     public void roll_monster() {
         AbstractMonster m;
@@ -142,11 +144,20 @@ public class RandomFusionMonster extends CustomRelic {
                 this.addToBot(new ApplyPowerAction(SP, AbstractDungeon.player, new VulnerablePower(SP, 1, false), 1, true));
 
             }
-            if (m.maxHealth!=400) { AbstractDungeon.actionManager.addToBottom(new CannotLoseAction());
-
+            if (m.maxHealth!=400) {
+                AbstractMonster finalM = m;
+                AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        AbstractDungeon.getCurrRoom().cannotLose = true;
+                        finalM.gold = 0;
+                        finalM.currentHealth = 0;
+                        finalM.die(false);
+                         finalM.healthBarUpdatedEvent();
+                        isDone=true;
+                    }
+                });
                 AbstractDungeon.actionManager.addToBottom(new HideHealthBarAction(m));
-
-                AbstractDungeon.actionManager.addToTop(new SuicideAction(m, false));
                 AbstractDungeon.actionManager.addToBottom(new CanLoseAction());}
 
         }}
