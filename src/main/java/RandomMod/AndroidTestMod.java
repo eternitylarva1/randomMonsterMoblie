@@ -1,10 +1,10 @@
-package androidTestMod;
+package RandomMod;
 
-import androidTestMod.relics.RandomFusionMonster;
-import androidTestMod.cards.yellow.TestStrike;
-import androidTestMod.enums.CardColorEnum;
-import androidTestMod.enums.LibraryTypeEnum;
-import androidTestMod.helpers.Keyword;
+import RandomMod.relics.RandomFusionMonster;
+import RandomMod.cards.yellow.TestStrike;
+import RandomMod.enums.CardColorEnum;
+import RandomMod.enums.LibraryTypeEnum;
+import RandomMod.helpers.Keyword;
 
 import com.badlogic.gdx.graphics.Color;
 import com.google.gson.Gson;

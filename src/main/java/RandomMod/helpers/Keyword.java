@@ -1,4 +1,4 @@
-package androidTestMod.helpers;
+package RandomMod.helpers;
 
 public class Keyword {
     public String PROPER_NAME;

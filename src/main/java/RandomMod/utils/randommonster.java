@@ -1,7 +1,7 @@
-package androidTestMod.utils;
+package RandomMod.utils;
 
 
-import androidTestMod.monsters.GremlinLeader1;
+import RandomMod.monsters.GremlinLeader1;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

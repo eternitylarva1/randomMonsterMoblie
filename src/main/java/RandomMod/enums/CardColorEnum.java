@@ -1,6 +1,6 @@
-package androidTestMod.enums;
+package RandomMod.enums;
 
-import androidTestMod.AndroidTestMod;
+import RandomMod.AndroidTestMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class CardColorEnum {

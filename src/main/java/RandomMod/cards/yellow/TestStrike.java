@@ -1,7 +1,7 @@
-package androidTestMod.cards.yellow;
+package RandomMod.cards.yellow;
 
-import androidTestMod.AndroidTestMod;
-import androidTestMod.enums.CardColorEnum;
+import RandomMod.AndroidTestMod;
+import RandomMod.enums.CardColorEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.android.mods.abstracts.CustomCard;

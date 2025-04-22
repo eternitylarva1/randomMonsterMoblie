@@ -1,27 +1,19 @@
-package androidTestMod.relics;
+package RandomMod.relics;
 
-import androidTestMod.AndroidTestMod;
-import androidTestMod.utils.randommonster;
+import RandomMod.AndroidTestMod;
+import RandomMod.utils.randommonster;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
 import com.megacrit.cardcrawl.actions.unique.CannotLoseAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.android.mods.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.ending.CorruptHeart;
-import com.megacrit.cardcrawl.potions.AttackPotion;
-import com.megacrit.cardcrawl.potions.FairyPotion;
-import com.megacrit.cardcrawl.potions.SmokeBomb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.relics.MoltenEgg2;
-import com.megacrit.cardcrawl.relics.PotionBelt;
-import com.megacrit.cardcrawl.relics.PrayerWheel;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -154,8 +146,6 @@ public class RandomFusionMonster extends CustomRelic {
 
                 AbstractDungeon.actionManager.addToBottom(new HideHealthBarAction(m));
                 AbstractDungeon.actionManager.addToBottom(new SuicideAction(m, false));
-
-
                 AbstractDungeon.actionManager.addToBottom(new CanLoseAction());}
 
         }}

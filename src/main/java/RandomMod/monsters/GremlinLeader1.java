@@ -1,4 +1,4 @@
-package androidTestMod.monsters;
+package RandomMod.monsters;
 
 //
 // Source code recreated from a .class file by IntelliJ IDEA
