@@ -1,0 +1,9 @@
+{
+  "AndroidTestMod:RandomFusionMonster": {
+    "NAME": "随机融合怪",
+    "FLAVOR": "上面的符文无法辨识。",
+    "DESCRIPTIONS": [
+      "怪物变成随机同层怪物,血量不变,buff保留"
+    ]
+  }
+}
