@@ -1,10 +1,10 @@
 {
-  "modId": "RandomMod",
-  "modName": "随机融合怪",
-  "modVersion": "1.6",
+  "modId": "UnlockAll",
+  "modName": "全解锁",
+  "modVersion": "1.0",
   "descriptions": {
-    "zhs": ["怪物变成随机同层怪物,血量不变,buff保留"],
-    "eng": ["STS android test mod.怪物变成随机同层怪物,血量不变,buff保留"]
+    "zhs": ["解锁所有进阶/角色/卡牌"],
+    "eng": ["STS android test mod.解锁所有进阶/角色/卡牌"]
   },
   "authorList": ["Dieyou"],
   "dependencies": []
