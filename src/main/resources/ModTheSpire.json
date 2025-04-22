@@ -1,7 +1,7 @@
 {
   "modId": "RandomMod",
   "modName": "随机融合怪",
-  "modVersion": "1.6",
+  "modVersion": "1.5",
   "descriptions": {
     "zhs": ["怪物变成随机同层怪物,血量不变,buff保留"],
     "eng": ["STS android test mod.怪物变成随机同层怪物,血量不变,buff保留"]

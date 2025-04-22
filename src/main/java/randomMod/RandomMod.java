@@ -40,7 +40,7 @@ public class RandomMod implements EditCardsSubscriber,
     }
 
     public static String getResourcePath(String path) {
-        return "Random-TestImages/" + path;
+        return "TestImages/" + path;
     }
 
     @Override
@@ -62,8 +62,8 @@ public class RandomMod implements EditCardsSubscriber,
             default:
                 language = "eng";
         }
-        BaseMod.loadCustomStringsFile(MOD_ID, CardStrings.class, "Random-localization/" + language + "/AndroidTest-CardStrings.json");
-        BaseMod.loadCustomStringsFile(MOD_ID, RelicStrings.class, "Random-localization/" + language + "/Random-RelicStrings.json");
+        BaseMod.loadCustomStringsFile(MOD_ID, CardStrings.class, "localization/" + language + "/AndroidTest-CardStrings.json");
+        BaseMod.loadCustomStringsFile(MOD_ID, RelicStrings.class, "localization/" + language + "/Random-RelicStrings.json");
     }
 
     @Override
@@ -82,7 +82,7 @@ public class RandomMod implements EditCardsSubscriber,
                 language = "eng";
         }
         final Gson gson = new Gson();
-        final String json = AssetLoader.getString(MOD_ID, "Random-localization/" + language + "/Random-keyword.json");
+        final String json = AssetLoader.getString(MOD_ID, "localization/" + language + "/Random-keyword.json");
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
             for (Keyword keyword : keywords) {
