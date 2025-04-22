@@ -1,7 +1,7 @@
-package RandomMod.relics;
+package randomMod.relics;
 
-import RandomMod.AndroidTestMod;
-import RandomMod.utils.randommonster;
+import randomMod.RandomMod;
+import randomMod.utils.randommonster;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
@@ -19,11 +19,11 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class RandomFusionMonster extends CustomRelic {
-    public static final String ID = AndroidTestMod.makeId("RandomFusionMonster");
-    public static final String IMG_PATH = AndroidTestMod.getResourcePath("relics/runeOctahedron.png");
+    public static final String ID = RandomMod.makeId("RandomFusionMonster");
+    public static final String IMG_PATH = RandomMod.getResourcePath("relics/runeOctahedron.png");
 
     public RandomFusionMonster() {
-        super(AndroidTestMod.MOD_ID, ID, IMG_PATH, RelicTier.RARE, LandingSound.SOLID);
+        super(RandomMod.MOD_ID, ID, IMG_PATH, RelicTier.RARE, LandingSound.SOLID);
         this.counter = 2;
     }
 

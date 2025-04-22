@@ -1,4 +1,4 @@
-package RandomMod.helpers;
+package randomMod.helpers;
 
 public class Keyword {
     public String PROPER_NAME;

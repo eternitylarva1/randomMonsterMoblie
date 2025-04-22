@@ -1,10 +1,10 @@
-package RandomMod;
+package randomMod;
 
-import RandomMod.relics.RandomFusionMonster;
-import RandomMod.cards.yellow.TestStrike;
-import RandomMod.enums.CardColorEnum;
-import RandomMod.enums.LibraryTypeEnum;
-import RandomMod.helpers.Keyword;
+import randomMod.relics.RandomFusionMonster;
+import randomMod.cards.yellow.TestStrike;
+import randomMod.enums.CardColorEnum;
+import randomMod.enums.LibraryTypeEnum;
+import randomMod.helpers.Keyword;
 
 import com.badlogic.gdx.graphics.Color;
 import com.google.gson.Gson;
@@ -24,19 +24,19 @@ import com.megacrit.cardcrawl.relics.PrayerWheel;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-public class AndroidTestMod implements EditCardsSubscriber,
+public class RandomMod implements EditCardsSubscriber,
                                        PostInitializeSubscriber,
                                        EditStringsSubscriber,
                                        EditRelicsSubscriber,
                                        EditKeywordsSubscriber,PostBattleSubscriber {
-    public static final String MOD_ID = "AndroidTestMod";
+    public static final String MOD_ID = "RandomMod";
     private static final Color YELLOW_COLOR = new Color(0.98F, 0.95F, 0.05F, 1.0F);
 
     public static void initialize() {
-        new AndroidTestMod();
+        new RandomMod();
     }
 
-    public AndroidTestMod() {
+    public RandomMod() {
         BaseMod.subscribe(this);
         CardColorBundle bundle = new CardColorBundle();
         bundle.cardColor = CardColorEnum.YELLOW;

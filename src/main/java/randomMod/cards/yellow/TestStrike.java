@@ -1,7 +1,7 @@
-package RandomMod.cards.yellow;
+package randomMod.cards.yellow;
 
-import RandomMod.AndroidTestMod;
-import RandomMod.enums.CardColorEnum;
+import randomMod.RandomMod;
+import randomMod.enums.CardColorEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.android.mods.abstracts.CustomCard;
@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class TestStrike extends CustomCard {
-    public static final String ID = AndroidTestMod.makeId("TestStrike");
-    public static final String IMG_PATH = AndroidTestMod.getResourcePath("cards/testStrike.png");
+    public static final String ID = RandomMod.makeId("TestStrike");
+    public static final String IMG_PATH = RandomMod.getResourcePath("cards/testStrike.png");
     private static final CardType TYPE = CardType.ATTACK;
     private static final String NAME;
     private static final String DESCRIPTION;

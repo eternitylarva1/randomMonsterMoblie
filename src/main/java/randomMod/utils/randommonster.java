@@ -1,7 +1,7 @@
-package RandomMod.utils;
+package randomMod.utils;
 
 
-import RandomMod.monsters.GremlinLeader1;
+import randomMod.monsters.GremlinLeader1;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
