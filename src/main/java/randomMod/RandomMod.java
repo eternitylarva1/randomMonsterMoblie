@@ -1,16 +1,12 @@
 package randomMod;
 
 import randomMod.relics.RandomFusionMonster;
-import randomMod.cards.yellow.TestStrike;
-import randomMod.enums.CardColorEnum;
-import randomMod.enums.LibraryTypeEnum;
 import randomMod.helpers.Keyword;
 
 import com.badlogic.gdx.graphics.Color;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.android.mods.AssetLoader;
 import com.megacrit.cardcrawl.android.mods.BaseMod;
-import com.megacrit.cardcrawl.android.mods.helpers.CardColorBundle;
 import com.megacrit.cardcrawl.android.mods.interfaces.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +18,6 @@ import com.megacrit.cardcrawl.relics.MoltenEgg2;
 import com.megacrit.cardcrawl.relics.PotionBelt;
 import com.megacrit.cardcrawl.relics.PrayerWheel;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class RandomMod implements EditCardsSubscriber,
                                        PostInitializeSubscriber,
@@ -38,29 +33,6 @@ public class RandomMod implements EditCardsSubscriber,
 
     public RandomMod() {
         BaseMod.subscribe(this);
-        CardColorBundle bundle = new CardColorBundle();
-        bundle.cardColor = CardColorEnum.YELLOW;
-        bundle.modId = MOD_ID;
-        bundle.bgColor =
-            bundle.cardBackColor =
-            bundle.frameColor =
-            bundle.frameOutlineColor =
-            bundle.descBoxColor =
-            bundle.trailVfxColor =
-            bundle.glowColor = YELLOW_COLOR;
-        bundle.libraryType = LibraryTypeEnum.YELLOW;
-        bundle.attackBg = getResourcePath("512/bg_attack_huntress.png");
-        bundle.skillBg = getResourcePath("512/bg_skill_huntress.png");
-        bundle.powerBg = getResourcePath("512/bg_power_huntress.png");
-        bundle.cardEnergyOrb = getResourcePath("512/card_huntress_orb.png");
-        bundle.energyOrb = getResourcePath("512/card_small_orb.png");
-        bundle.attackBgPortrait = getResourcePath("1024/bg_attack_huntress.png");
-        bundle.skillBgPortrait = getResourcePath("1024/bg_skill_huntress.png");
-        bundle.powerBgPortrait = getResourcePath("1024/bg_power_huntress.png");
-        bundle.energyOrbPortrait = getResourcePath("1024/card_huntress_orb.png");
-        bundle.setEnergyPortraitWidth(164);
-        bundle.setEnergyPortraitHeight(164);
-        BaseMod.addColor(bundle);
     }
 
     public static String makeId(String name) {
@@ -73,13 +45,11 @@ public class RandomMod implements EditCardsSubscriber,
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addCard(new TestStrike());
+
     }
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.getColorBundleMap().get(CardColorEnum.YELLOW).loadRegion();
-        UnlockTracker.unlockCard(TestStrike.ID);
     }
 
     @Override
@@ -93,7 +63,7 @@ public class RandomMod implements EditCardsSubscriber,
                 language = "eng";
         }
         BaseMod.loadCustomStringsFile(MOD_ID, CardStrings.class, "localization/" + language + "/AndroidTest-CardStrings.json");
-        BaseMod.loadCustomStringsFile(MOD_ID, RelicStrings.class, "localization/" + language + "/AndroidTest-RelicStrings.json");
+        BaseMod.loadCustomStringsFile(MOD_ID, RelicStrings.class, "localization/" + language + "/Random-RelicStrings.json");
     }
 
     @Override
@@ -112,7 +82,7 @@ public class RandomMod implements EditCardsSubscriber,
                 language = "eng";
         }
         final Gson gson = new Gson();
-        final String json = AssetLoader.getString(MOD_ID, "localization/" + language + "/AndroidTest-KeywordStrings.json");
+        final String json = AssetLoader.getString(MOD_ID, "localization/" + language + "/Random-keyword.json");
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
             for (Keyword keyword : keywords) {
