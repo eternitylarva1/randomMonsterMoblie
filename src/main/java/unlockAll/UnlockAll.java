@@ -46,6 +46,7 @@ public class UnlockAll implements EditCardsSubscriber,
     }
 
     public void receivePostInitialize() {
+
         unlockAscensionLevel();
         unlockFinalAct();
         unlockDaily();
@@ -95,6 +96,7 @@ public class UnlockAll implements EditCardsSubscriber,
             UnlockTracker.lockedCards.remove(id);
             AbstractCard c = CardLibrary.getCard(id);
             if (c != null && !c.isSeen) {
+                UnlockTracker.markCardAsSeen(c.cardID);
                 c.isSeen = true;
                 c.unlock();
                 UnlockTracker.seenPref.putInteger(id, 1);
@@ -111,6 +113,7 @@ public class UnlockAll implements EditCardsSubscriber,
             UnlockTracker.lockedRelics.remove(id);
             AbstractRelic r = RelicLibrary.getRelic(id);
             if (r != null && !r.isSeen) {
+                UnlockTracker.markRelicAsSeen(r.relicId);
                 r.isSeen = true;
                 UnlockTracker.relicSeenPref.putInteger(id, 1);
             }
