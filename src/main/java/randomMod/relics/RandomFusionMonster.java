@@ -145,7 +145,8 @@ public class RandomFusionMonster extends CustomRelic {
             if (m.maxHealth!=400) { AbstractDungeon.actionManager.addToBottom(new CannotLoseAction());
 
                 AbstractDungeon.actionManager.addToBottom(new HideHealthBarAction(m));
-                AbstractDungeon.actionManager.addToBottom(new SuicideAction(m, false));
+
+                AbstractDungeon.actionManager.addToTop(new SuicideAction(m, false));
                 AbstractDungeon.actionManager.addToBottom(new CanLoseAction());}
 
         }}
