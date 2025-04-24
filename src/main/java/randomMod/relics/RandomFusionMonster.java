@@ -24,7 +24,7 @@ public class RandomFusionMonster extends CustomRelic {
     public static final String IMG_PATH = RandomMod.getResourcePath("relics/runeOctahedron.png");
 
     public RandomFusionMonster() {
-        super(RandomMod.MOD_ID, ID, IMG_PATH, RelicTier.RARE, LandingSound.SOLID);
+        super(RandomMod.MOD_ID, ID, IMG_PATH, RelicTier.SPECIAL, LandingSound.SOLID);
         this.counter = 2;
     }
 
